@@ -1,0 +1,1 @@
+export const SCORE_PLUS_ONE = 'SCORE_PLUS_ONE'

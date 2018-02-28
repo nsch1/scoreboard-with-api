@@ -23,7 +23,7 @@ app.get('/players', (req, res) => {
     })
 })
 
-app.put('/players/:id', (req, res) => {
+app.patch('/players/:id', (req, res) => {
   const playerId = Number(req.params.id)
   const scoreUpdate = req.body
 
