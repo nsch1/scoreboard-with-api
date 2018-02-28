@@ -11,7 +11,7 @@ class Player extends PureComponent {
   }
 
   render() {
-    const { id, name, score } = this.props
+    const { name, score } = this.props
 
     return (
       <li className="Player">
