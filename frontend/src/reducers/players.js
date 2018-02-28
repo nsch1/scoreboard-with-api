@@ -1,6 +1,6 @@
 import {FETCHED_PLAYERS, UPDATED_PLAYER} from '../actions/type'
 
-export default function (state = [], { type, id, payload } = {}) {
+export default function (state = [], { type, payload } = {}) {
   switch (type) {
     case FETCHED_PLAYERS :
       return [].concat(payload)
