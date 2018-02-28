@@ -1,24 +1,13 @@
-import {SCORE_PLUS_ONE} from '../actions/type'
+import {SCORE_PLUS_ONE, FETCHED_PLAYERS, UPDATED_PLAYER} from '../actions/type'
 
-const initialState = [
-  {
-    id:1,
-    name: "Testplayer",
-    score: 4
-  },
-  {
-    id:2,
-    name: "Testplayer2",
-    score: 3
-  }
-]
-
-export default function (state = initialState, { type, id } = {}) {
+export default function (state = [], { type, id, payload } = {}) {
   switch (type) {
-    case SCORE_PLUS_ONE :
+    case FETCHED_PLAYERS :
+      return [].concat(payload)
+    case UPDATED_PLAYER :
       return state.map(player => {
-        if (player.id !== id) return player
-        return { ...player, score: player.score + 1}
+        if (player.id !== payload.id) return player
+        return { ...payload }
       })
     default:
       return state

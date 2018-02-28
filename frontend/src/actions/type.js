@@ -1,1 +1,3 @@
-export const SCORE_PLUS_ONE = 'SCORE_PLUS_ONE'
+export const FETCHED_PLAYERS = 'FETCHED_PLAYERS'
+
+export const UPDATED_PLAYER = 'UPDATED_PLAYER'

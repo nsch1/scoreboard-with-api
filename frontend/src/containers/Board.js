@@ -1,9 +1,15 @@
 import React, { PureComponent } from 'react'
 import {connect} from 'react-redux'
 import Player from '../components/Player'
+import {fetchPlayers} from '../actions/scoreboard'
 import './Board.css'
 
 class Board extends PureComponent {
+
+    componentWillMount() {
+      this.props.fetchPlayers()
+    }
+
   render() {
     const players = this.props.players
 
@@ -25,4 +31,4 @@ class Board extends PureComponent {
 
 const mapStateToProps = ({ players }) => ({ players })
 
-export default connect(mapStateToProps)(Board)
+export default connect(mapStateToProps, { fetchPlayers })(Board)
