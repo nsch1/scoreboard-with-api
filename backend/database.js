@@ -27,4 +27,14 @@ client
     console.lot('Unable to connect to the database:', err)
   })
 
-  module.exports = client
+const Player = client.define('Player', {
+  name: Sequelize.STRING,
+  score: Sequelize.INTEGER
+}, {
+  tablename: 'Players'
+})
+
+module.exports = {
+  client: client,
+  Player: Player
+}
