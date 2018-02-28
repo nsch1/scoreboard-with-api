@@ -2,9 +2,11 @@ const express = require('express')
 const app = express()
 const sequelize = require('./database')
 const db = require('./models')
+const cors = require('cors')
 const { Player } = db
 const bodyParser = require('body-parser')
 
+app.use(cors())
 app.use(bodyParser.json())
 
 app.listen(3001, () => console.log('Express listening on port: 3001'))
@@ -16,7 +18,7 @@ app.get('/', (req, res) => {
 app.get('/players', (req, res) => {
   Player.findAll()
     .then(players => {
-      res.json({ players })
+      res.json(players)
     })
     .catch(err => {
       console.error(err)
