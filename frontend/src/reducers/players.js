@@ -1,4 +1,4 @@
-import {SCORE_PLUS_ONE, FETCHED_PLAYERS, UPDATED_PLAYER} from '../actions/type'
+import {FETCHED_PLAYERS, UPDATED_PLAYER} from '../actions/type'
 
 export default function (state = [], { type, id, payload } = {}) {
   switch (type) {

@@ -1,5 +1,5 @@
 import request from 'superagent'
-import {SCORE_PLUS_ONE, FETCHED_PLAYERS, UPDATED_PLAYER} from './type'
+import {FETCHED_PLAYERS, UPDATED_PLAYER} from './type'
 
 const baseUrl = 'http://localhost:3001'
 
